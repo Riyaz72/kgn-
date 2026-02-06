@@ -292,41 +292,39 @@ button{
 			<div class="container">
 				<!-- row -->
 				<div class="row">
-					<!-- Product main img -->
-					<div class="col-md-5 col-md-push-5">
+					
+                      <!-- Product main img -->
+                      <div class="col-md-5 col-md-push-2">
 						<div id="product-main-img">
 							<div class="product-preview">
-								<img src="./img/helmet.png" style="width:500px; height:300px;" alt="">
+								<img src="./img/helmet.png" alt="">
 							</div>
 
 							<div class="product-preview">
-								<img src="./img/glass.png"  style="width:500px; height:300px;" alt="">
+								<img src="./img/glass.png"  alt="">
 							</div>
 
 							<div class="product-preview">
-								<img src="./img/bag.png"  style="width:500px; height:300px;" alt="">
+								<img src="./img/bag.png"  alt="">
 							</div>
 
 							<div class="product-preview">
-								<img src="./img/handle.png"  style="width:500px; height:300px;" alt="">
+								<img src="./img/handle.png"  alt="">
 							</div>
 
-                             <div class="product-preview">
-								<img src="./img/screwdriver.png"  style="width:500px; height:300px;" alt="">
+                             
+                            <div class="product-preview">
+								<img src="./img/shoe.png" >
 							</div>
                             <div class="product-preview">
-								<img src="./img/shoe.png"  style="width:500px; height:300px;" alt="">
+								<img src="./img/nut.png" >
 							</div>
+                            <!-- <div class="product-preview">
+								<img src="./img/elec.png" >
+							</div> -->
                             <div class="product-preview">
-								<img src="./img/nut.png"  style="width:500px; height:300px;" alt="">
+								<img src="./img/englishcomound.png"  alt="">
 							</div>
-                            <div class="product-preview">
-								<img src="./img/elec.png"  style="width:500px; height:300px;" alt="">
-							</div>
-                            <div class="product-preview">
-								<img src="./img/englishcomound.png"  style="width:500px; height:300px;" alt="">
-							</div>
-                            
 						</div>
 					</div>
 					<!-- /Product main img -->
@@ -349,34 +347,51 @@ button{
 							<div class="product-preview">
 								<img src="./img/handle.png" alt="">
 							</div>
-                            <div class="product-preview">
+                            <!-- <div class="product-preview">
 								<img src="./img/screwdriver.png" alt="">
-							</div>
+							</div> -->
                             <div class="product-preview">
 								<img src="./img/shoe.png" alt="">
 							</div>
                             <div class="product-preview">
 								<img src="./img/nut.png" alt="">
 							</div>
-                            <div class="product-preview">
-								<img src="./img/elec.png" alt="">
-							</div>
+                            
                             <div class="product-preview">
 								<img src="./img/englishcomound.png" alt="">
 							</div>
-                            <var></var>
+						</div>
+					</div>
+					<!-- /Product thumb imgs -->
+
+					<!-- Product details -->
+					<div class="col-md-5">
+						<div class="product-details">
+							<!-- <h2 class="product-name">TOOLS</h2> -->
+							 <div class="add-to-cart">
+								
+								<button class="add-to-cart-btn">Tools</button>
+							</div>
+							
+							<p class="text-justify">Tools are essential for construction, manufacturing, and maintenance work. Electronic tools
+								  which are used for testing, repairing, and assembling electrical and electronic systems. Plastic tools which are
+								   lightweight, corrosion-resistant, and commonly used for safe handling and insulation purposes. Building tools 
+								    which are used in construction, renovation, and structural work. Together, these tools help improve efficiency, 
+									accuracy, and safety in various industrial and building applications.</p>
+                             <p>Quality tools are the foundation of quality work.! </p>
+							
 						</div>
 					</div>
 
 
-                   
+
 
 					<!-- Product tab -->
 					<div class="col-md-12">
 						<div id="product-tab">
 							<!-- product tab nav -->
 							<ul class="tab-nav">
-								<li class="active"><a data-toggle="tab" href="#tab1">Item</a></li>
+								<li class="active"><a data-toggle="tab" href="#tab1">Items</a></li>
 								<!-- <li><a data-toggle="tab" href="#tab2">Details</a></li> -->
 								
 							</ul>
@@ -815,7 +830,7 @@ function changePage(page) {
  function loadCategories() {
 
     $.ajax({
-        url: "http://localhost:8090/mainCategory/getCategoryList",
+        url: "https://i-cmms.com/cmms/mainCategory/getCategoryList",
         type: "GET",
         dataType: "json",
         success: function (categories) {
@@ -845,7 +860,7 @@ function changePage(page) {
 function loadItemsByCategory(categoryId) {
 
     $.ajax({
-        url: "http://localhost:8090/mainItem/get-items",
+        url: "https://i-cmms.com/cmms/mainItem/get-items",
         type: "GET",
         data: { categoryId: categoryId },
         dataType: "json",
@@ -886,7 +901,7 @@ function renderPage() {
       <div class="col-md-4 col-xs-6">
             <div class="shop">
                 <div class="shop-img">
-                    <img src="http://localhost:8090/mainItem/getimage/${item.itemImage}" 
+                    <img src="https://i-cmms.com/cmms/mainItem/getimage/${item.itemImage}" 
                          alt="No Image" style="width:300px; height:300px;">
                 </div>
                 <div class="shop-body">
